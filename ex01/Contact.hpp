@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:57:03 by liulm             #+#    #+#             */
-/*   Updated: 2025/11/14 15:43:29 by liulm            ###   ########.fr       */
+/*   Updated: 2025/11/15 12:38:42 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 # define CONTACT_HPP
 
 # include <iostream>
-# include "PhoneBook.hpp"
 
 class Contact
 {
 	public:
 		Contact();
 		virtual ~Contact();
+
+		bool add_info(int i);
+	private:
 		enum Field
 		{
 			First_Name = 0,
@@ -29,10 +31,9 @@ class Contact
 			Phone_Number,
 			Darkest_Secret
 		};
-		bool Contact::add_info(int i);
-	private:
-		int index;
-		std::string infos[5];
+		int					index;
+		std::string			infos[5];
+		static std::string	section[5];
 };
 
 #endif
