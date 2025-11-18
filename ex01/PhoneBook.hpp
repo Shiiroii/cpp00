@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:17:17 by liulm             #+#    #+#             */
-/*   Updated: 2025/11/15 12:38:39 by liulm            ###   ########.fr       */
+/*   Updated: 2025/11/18 18:55:04 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ class PhoneBook
 	public:
 		PhoneBook();
 		virtual	~PhoneBook();
-		void	start(void);
-		void	AddContact(void);
+		void	start();
+		void	AddContact();
+		void	SearchContact();
 	private:
 		Contact	contacts[8];
 		int		numContacts;
