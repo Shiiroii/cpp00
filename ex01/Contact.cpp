@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:56:43 by liulm             #+#    #+#             */
-/*   Updated: 2025/11/18 18:52:33 by liulm            ###   ########.fr       */
+/*   Updated: 2025/11/22 14:47:54 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,16 @@ Contact::Contact()
 	}
 }
 
-//Contact::~Contact()
-//{
-//}
+Contact::~Contact()
+{
+}
 
-bool	Contact::add_info(int i)
+void	Contact::setIndex(int i)
+{
+	this->index = i;
+}
+
+bool	Contact::addInfo(int i)
 {
 	int j;
 	size_t totalLen = 0;
@@ -47,48 +52,54 @@ bool	Contact::add_info(int i)
 	while (j <= Darkest_Secret)
 	{
 		std::cout << this->section[j] << std::endl;
-		std::getline(std::cin, this->infos[j]);
+		if (!std::getline(std::cin, this->infos[j]))
+			return (0);
+		else if (this->infos[j].empty())
+		{
+			std::cout << "La ligne est vide !" << std::endl;
+			return (0);
+		}
 		j++;
 	}
 	j = First_Name;
-	while (i <= Darkest_Secret)
+	while (j <= Darkest_Secret)
 	{
 		totalLen += this->infos[j].length();
 		j++;
 	}
 	if (totalLen == 0)
 	{
-		std::cout << "|-               -Empty contact-               -|" << std::endl;
+		std::cout << "|-                  -Empty contact-                  -|" << std::endl;
 		return (0);
 	}
-	std::cout << "|-               -Contact added!-              -|" << std::endl;
+	std::cout << "|-                  -Contact added!-                 -|" << std::endl;
 	return (1);
 }
 
-void Contact::show_page()
+void Contact::showPage()
 {
 	int	i;
 
 	i = First_Name;
-	std::cout << "|" << std::setw(5) << this->index;
+	std::cout << "|-" << std::setw(12) << this->index;
 	while ( i <= Nickname)
 	{
 		std::cout << "|";
-		if (this->infos[i].length() > 5)
-			std::cout << this->infos[i].substr(0, 9) << ".";
+		if (this->infos[i].length() > 12)
+			std::cout << this->infos[i].substr(0, 11) << ".";
 		else
-			std::cout << std::setw(5) << this->infos[i];
+			std::cout << std::setw(12) << this->infos[i];
 		i++;
 	}
-	std::cout << "|" << std::endl;
+	std::cout << "-|" << std::endl;
 }
 
-void Contact::display_contact()
+void Contact::displayContact()
 {
 	int	i;
 
 	i = 0;
-	std::cout << "|- Contact : [" << this->index <<  "] -|" << std::endl;
+	std::cout << "|-                  Contact : [" << this->index <<  "]                    -|" << std::endl;
 	while (i <= Darkest_Secret)
 	{
 		std::cout << Contact::section[i] << ":";

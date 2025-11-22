@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 14:52:26 by liulm             #+#    #+#             */
-/*   Updated: 2025/11/18 18:56:30 by liulm            ###   ########.fr       */
+/*   Updated: 2025/11/22 14:21:30 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,20 @@ int	main(void)
 	std::string	command;
 	bool		launch;
 
-	phonebook.start();
+	std::cout << "|-                   -Phone Book-                    -|" << std::endl;
+	std::cout << "|-    Enter your command: [ADD], [SEARCH], [EXIT]    -|" << std::endl;
 	launch = true;
 	while (launch)
 	{
 		std::cout << ">";
 		std::getline(std::cin, command);
 		if (command == "ADD")
-			phonebook.AddContact();
+			phonebook.addContact();
 		else if (command == "SEARCH")
-			phonebook.SearchContact();
+			phonebook.searchContact();
 		else if (command == "EXIT")
 		{
-			std::cout << "|-         Closing PhoneBook         -|" << std::endl;
+			std::cout << "|-                 Closing PhoneBook                 -|" << std::endl;
 			launch = false;
 		}
 	}

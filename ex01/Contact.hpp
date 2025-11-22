@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:57:03 by liulm             #+#    #+#             */
-/*   Updated: 2025/11/18 18:57:48 by liulm            ###   ########.fr       */
+/*   Updated: 2025/11/21 15:51:08 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ class Contact
 {
 	public:
 		Contact();
-		//virtual ~Contact();
+		virtual	~Contact();
 
-		bool add_info(int i);
-		void Contact::show_page();
-		void Contact::display_contact();
+		bool	addInfo(int i);
+		void	showPage();
+		void	displayContact();
+		void	setIndex(int i);
 	private:
 		enum Field
 		{

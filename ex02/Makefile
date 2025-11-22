@@ -5,20 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/11/14 12:34:31 by liulm             #+#    #+#              #
-#    Updated: 2025/11/19 13:20:00 by lionelulm        ###   ########.fr        #
+#    Created: 2025/11/22 14:13:52 by lionelulm         #+#    #+#              #
+#    Updated: 2025/11/22 14:18:56 by lionelulm        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = PhoneBook
+NAME = Account
 
 CPP = c++
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS =	Contact.cpp		\
-		PhoneBook.cpp	\
-		main.cpp
+SRCS = Account.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

@@ -1,34 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 13:17:17 by liulm             #+#    #+#             */
-/*   Updated: 2025/11/22 14:20:53 by lionelulm        ###   ########.fr       */
+/*   Created: 2025/11/22 14:13:23 by lionelulm         #+#    #+#             */
+/*   Updated: 2025/11/22 14:13:39 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Account.hpp"
 
-# include <iostream>
-# include "Contact.hpp"
 
-class PhoneBook
-{
-	public:
-		PhoneBook();
-		virtual	~PhoneBook();
-
-		// void	Start();
-		void	addContact();
-		void	searchContact();
-		void	showHeader();
-	private:
-		Contact	contacts[8];
-		int		nbContacts;
-};
-
-#endif
