@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
+/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:56:43 by liulm             #+#    #+#             */
-/*   Updated: 2025/11/22 14:47:54 by lionelulm        ###   ########.fr       */
+/*   Updated: 2025/11/22 15:48:49 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ bool	Contact::addInfo(int i)
 			return (0);
 		else if (this->infos[j].empty())
 		{
-			std::cout << "La ligne est vide !" << std::endl;
+			std::cout << "A contact can't have an empty field!" << std::endl;
 			return (0);
 		}
 		j++;
