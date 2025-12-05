@@ -6,7 +6,7 @@
 #    By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/22 14:13:52 by lionelulm         #+#    #+#              #
-#    Updated: 2025/11/22 14:18:56 by lionelulm        ###   ########.fr        #
+#    Updated: 2025/12/05 16:47:29 by lionelulm        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CPP = c++
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS = Account.cpp
+SRCS =	Account.cpp		\
+		tests.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
