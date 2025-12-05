@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
+/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 14:13:23 by lionelulm         #+#    #+#             */
-/*   Updated: 2025/12/05 16:46:52 by lionelulm        ###   ########.fr       */
+/*   Updated: 2025/12/05 17:11:29 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void	Account::displayAccountsInfos( void )
 	_displayTimestamp();
 
 	std::cout
-		<< "accounts" << _nbAccounts
+		<< "accounts:" << _nbAccounts
 		<< ";total:" << _totalAmount
 		<< ";deposits:" << _totalNbDeposits
 		<< ";withdrawals:" << _totalNbWithdrawals
@@ -117,6 +117,7 @@ void	Account::makeDeposit( int deposit )
 	std::cout
 		<< "index:" << _accountIndex
 		<< ";p_amount:" << _amount - deposit
+		<< ";deposit:" << deposit
 		<< ";amount:" << _amount
 		<< ";nb_deposits:" << _nbDeposits
 		<< std::endl;
@@ -126,6 +127,9 @@ bool	Account::makeWithdrawal( int withdrawal )
 {
 	_displayTimestamp();
 
+	std::cout << "index:" << _accountIndex
+		<< ";p_amount:" << _amount
+		<< ";withdrawal:";
 	if (withdrawal > _amount)
 	{
 		std::cout << "refused" << std::endl;
